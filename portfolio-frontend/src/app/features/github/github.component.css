@@ -1,0 +1,37 @@
+/* GitHub section with dark neon theme */
+.github {
+  padding: 6rem 2rem;
+  background: var(--bg-dark);
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 3rem;
+}
+
+.github-card {
+  background: var(--bg-light);
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,255,234,0.2);
+}
+
+.github-card h3 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.github-card p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}

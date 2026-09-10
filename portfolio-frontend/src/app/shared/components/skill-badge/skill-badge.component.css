@@ -1,0 +1,23 @@
+/* Skill badge – subtle hover scale */
+.skill-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  margin: 0.3rem;
+  background: var(--bg-dark);
+  color: var(--primary);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--primary);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.skill-badge:hover {
+  transform: scale(1.05);
+  background: var(--card-bg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-badge {
+    transition: none;
+  }
+}

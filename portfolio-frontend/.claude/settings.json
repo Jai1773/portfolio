@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(npx -p @angular/cli ng new portfolio-frontend --directory ./ --routing --style css --skip-git)",
+      "PowerShell(npm --version)",
+      "Bash(npx -p @angular/cli ng new portfolio-frontend --directory ./ --routing --style css --skip-git)",
+      "Read(//d/projectFiles/portfolio/**)",
+      "PowerShell(npm install -g @angular/cli)",
+      "PowerShell(New-Item -ItemType File \"src/app/app.component.css\")",
+      "PowerShell(npm run build)",
+      "Read(//d/projectFiles/projects ideas/**)"
+    ]
+  }
+}

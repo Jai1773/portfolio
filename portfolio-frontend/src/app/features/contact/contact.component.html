@@ -1,0 +1,45 @@
+<section class="contact scroll-reveal" scrollReveal id="contact">
+  <div class="container">
+    <h2 class="section-title">Let's Work Together</h2>
+    <p class="contact-intro">Have a website idea, web application requirement, or an existing application that needs improvement? I'd be happy to discuss your requirements and understand how I can help.</p>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Get In Touch</h3>
+        <div class="info-item">
+          <span class="icon">✉️</span>
+          <p>Email: your-email@example.com</p>
+        </div>
+        <div class="info-item">
+          <span class="icon">💻</span>
+          <p>GitHub: your-github-link</p>
+        </div>
+        <div class="info-item">
+          <span class="icon">🔗</span>
+          <p>LinkedIn: your-linkedin-link</p>
+        </div>
+        <div class="contact-cta">
+          <p>Have a project in mind? Let's talk.</p>
+        </div>
+      </div>
+
+      <div class="contact-form-container">
+        <form (submit)="onSubmit()" #f="ngForm" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" [(ngModel)]="contactForm.name" required placeholder="Your Name" aria-label="Name" aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" [(ngModel)]="contactForm.email" required placeholder="Your Email" aria-label="Email" aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" [(ngModel)]="contactForm.message" required placeholder="Your Project Requirements" aria-label="Message" aria-required="true"></textarea>
+          </div>
+          <app-button label="Send Message" variant="primary" href="javascript:void(0)" (click)="onSubmit()"></app-button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

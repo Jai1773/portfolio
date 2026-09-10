@@ -1,0 +1,42 @@
+/* Footer styled for dark neon theme */
+.footer {
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  padding: 3rem 0;
+  text-align: center;
+  margin-top: 4rem;
+  border-top: 2px solid var(--primary);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-tech {
+  margin: 1rem 0;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.footer-tagline {
+  font-style: italic;
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+
+.back-to-top {
+  margin-top: 1.5rem;
+  background: var(--primary);
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.back-to-top:hover {
+  background: #00ffff; /* brighter cyan on hover */
+}

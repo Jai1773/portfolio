@@ -1,0 +1,12 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.directive';
+
+@Component({
+  selector: 'app-experience',
+  standalone: true,
+  imports: [CommonModule, ScrollRevealDirective],
+  templateUrl: './experience.component.html',
+  styleUrls: ['./experience.component.css']
+})
+export class ExperienceComponent {}

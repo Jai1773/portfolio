@@ -1,0 +1,12 @@
+<section class="why-work scroll-reveal" scrollReveal id="why-work">
+  <div class="container">
+    <h2 class="section-title">Why Work With Me</h2>
+    <div class="reasons-grid">
+      <div class="reason-card" *ngFor="let reason of reasons">
+        <div class="reason-icon">✅</div>
+        <h3>{{ reason.title }}</h3>
+        <p>{{ reason.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

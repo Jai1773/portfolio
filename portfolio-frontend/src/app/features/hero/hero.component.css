@@ -1,0 +1,138 @@
+/* Hero Section – premium dark theme with two‑column layout */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 2rem;
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Left side – text */
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: var(--text-primary);
+}
+
+.hero-name {
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 0;
+  color: var(--primary);
+}
+
+.hero-role {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Availability badge – slide‑up animation */
+.availability-badge {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 255, 234, 0.1);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  animation: badgeSlideUp 0.7s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes badgeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Right side – abstract visual placeholder */
+.hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-visual {
+  width: 100%;
+  height: 350px;
+  background: radial-gradient(circle at 30% 30%, var(--primary) 0%, var(--bg-primary) 70%);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 234, 0.2);
+    animation: none;
+  }
+
+  .hero-visual { transform: perspective(400px) rotateX(var(--parallax-rotate-x, 0deg)) rotateY(var(--parallax-rotate-y, 0deg)); transition: transform 0.1s ease-out; }
+
+@keyframes visualPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+/* Scroll indicator – subtle arrow */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+.scroll-indicator span {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-left: 2px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
+  transform: rotate(-45deg);
+}
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 10px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-right {
+    margin-top: 2rem;
+  }
+}
+
+/* Reduce motion for users preferring it */
+@media (prefers-reduced-motion: reduce) {
+  .availability-badge,
+  .hero-visual,
+  .scroll-indicator {
+    animation: none;
+  }
+}
