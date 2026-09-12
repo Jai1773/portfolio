@@ -1,0 +1,24 @@
+.carousel {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.viewport {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  min-width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,64 @@
+@use '../variables' as *;
+
+.content-card {
+  position: relative;
+  background: $color-card-bg;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: scale(1.04);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .thumbnail {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: $color-text-primary;
+
+    .title {
+      margin: 0;
+      font-size: $font-size-lg;
+    }
+    .category {
+      margin: 0;
+      font-size: $font-size-base;
+      color: $color-text-secondary;
+    }
+  }
+
+  .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: $color-accent;
+    font-size: 2rem;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  &:hover .play-btn {
+    opacity: 1;
+  }
+}

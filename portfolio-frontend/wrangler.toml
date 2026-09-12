@@ -1,0 +1,10 @@
+name = "portfolio-frontend"
+compatibility_date = "2024-01-01"
+workers_dev = true
+
+[assets]
+directory = "./dist/portfolio-frontend/browser"
+not_found_handling = "single-page-application"
+
+[build]
+command = "npm install && npm run build"

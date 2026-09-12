@@ -1,0 +1,14 @@
+<div class="modal-backdrop" *ngIf="visible">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 class="modal-title">{{title}}</h2>
+      <button (click)="onClose()" class="close-btn">&times;</button>
+    </div>
+    <div class="modal-body">
+      <ng-content></ng-content>
+    </div>
+    <div class="modal-footer">
+      <ng-content select="[modal-footer]"></ng-content>
+    </div>
+  </div>
+</div>

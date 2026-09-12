@@ -1,0 +1,48 @@
+@use '../variables' as *;
+
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $color-bg-secondary;
+  padding: 0.5rem 0;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid $color-border;
+
+  .nav-item {
+    background: none;
+    border: none;
+    color: $color-text-secondary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.75rem;
+    cursor: pointer;
+
+    .material-icons {
+      font-size: 1.5rem;
+    }
+
+    .label {
+      margin-top: 0.25rem;
+    }
+
+    &.active,
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+
+  .navbar {
+    display: none;
+  }
+}

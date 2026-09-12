@@ -1,0 +1,67 @@
+@use 'sass:color';
+@use '../variables' as *;
+
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: $color-bg-secondary;
+  color: $color-text-primary;
+  z-index: 1000;
+  transition: background 0.3s;
+
+  &.scrolled {
+    background: color.adjust($color-bg-secondary, $lightness: -5%);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: $color-text-primary;
+    text-decoration: none;
+
+    .logo-icon {
+      margin-right: 0.5rem;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+
+    li a {
+      color: $color-text-secondary;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+
+      &.active,
+      &:hover {
+        color: $color-text-primary;
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+  .icon-btn {
+    background: none;
+    border: none;
+    color: $color-text-secondary;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+
+    &:hover {
+      color: $color-text-primary;
+    }
+  }
+}

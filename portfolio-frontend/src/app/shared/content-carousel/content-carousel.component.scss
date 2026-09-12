@@ -1,0 +1,26 @@
+@use '../variables' as *;
+
+.content-carousel {
+  margin: 2rem 0;
+
+  h2 {
+    color: $color-text-primary;
+    margin-bottom: 1rem;
+    font-size: $font-size-xxl;
+  }
+
+  .carousel-container {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $color-border;
+      border-radius: 4px;
+    }
+  }
+}

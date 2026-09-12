@@ -1,0 +1,9 @@
+<div class="card">
+  @if (imageUrl) {
+    <img [src]="imageUrl" [alt]="title ?? ''" class="card-image" />
+  }
+  @if (title) {
+    <h3 class="card-title">{{ title }}</h3>
+  }
+  <ng-content></ng-content>
+</div>

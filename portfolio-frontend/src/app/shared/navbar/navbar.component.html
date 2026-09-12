@@ -1,0 +1,24 @@
+<nav class="navbar" [class.scrolled]="scrolled">
+  <div class="navbar-left">
+    <a class="logo" routerLink="/">
+      <span class="logo-icon">🎥</span>
+      <span class="logo-text">ToonSpeaker</span>
+    </a>
+  </div>
+  <ul class="navbar-center">
+    <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/browse" routerLinkActive="active">Browse</a></li>
+    <li><a routerLink="/browse/cartoons" routerLinkActive="active">Cartoons</a></li>
+    <li><a routerLink="/browse/anime" routerLinkActive="active">Anime</a></li>
+    <li><a routerLink="/browse/movies" routerLinkActive="active">Movies</a></li>
+  </ul>
+  <div class="navbar-right">
+    <button class="icon-btn" aria-label="Search"><span class="material-icons">search</span></button>
+    <button class="icon-btn" aria-label="Watch Later"><span class="material-icons">watch_later</span></button>
+    <button class="icon-btn" aria-label="Notifications"><span class="material-icons">notifications</span></button>
+    <div class="profile-dropdown">
+      <button class="icon-btn" aria-label="Profile"><span class="material-icons">account_circle</span></button>
+      <!-- Dropdown placeholder -->
+    </div>
+  </div>
+</nav>

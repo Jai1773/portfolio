@@ -1,0 +1,8 @@
+<section class="content-carousel">
+  <h2 *ngIf="title">{{title}}</h2>
+  <div class="carousel-container">
+    <ng-container *ngFor="let item of contents">
+      <app-content-card [content]="item"></app-content-card>
+    </ng-container>
+  </div>
+</section>

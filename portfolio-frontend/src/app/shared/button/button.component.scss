@@ -1,0 +1,14 @@
+.app-button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.app-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

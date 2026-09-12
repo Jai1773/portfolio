@@ -1,0 +1,16 @@
+<div class="carousel">
+  <button (click)="prev()" class="nav prev">&#8249;</button>
+  <div class="viewport">
+    <ng-container *ngIf="items.length">
+      <div class="item" (click)="selectItem(items[currentIndex])">
+        <ng-container *ngTemplateOutlet="itemTemplate; context: { $implicit: items[currentIndex] }"></ng-container>
+      </div>
+    </ng-container>
+  </div>
+  <button (click)="next()" class="nav next">&#8250;</button>
+</div>
+
+<ng-template #itemTemplate let-item>
+  <!-- User can provide their own template via <ng-content> or override this template in the parent component -->
+  <div class="default-item">{{item | json}}</div>
+</ng-template>

@@ -1,0 +1,12 @@
+@use '../../shared/variables' as *;
+
+section {
+  margin-bottom: 2rem;
+}
+
+.hero-section {
+  background: $color-bg-secondary;
+  color: $color-text-primary;
+  padding: 2rem;
+  text-align: center;
+}

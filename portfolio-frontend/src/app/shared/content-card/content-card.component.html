@@ -1,0 +1,8 @@
+<div class="content-card">
+  <img [src]="content.thumbnailUrl || 'assets/placeholder.png'" alt="{{content.title}}" class="thumbnail"/>
+  <div class="info">
+    <h3 class="title">{{content.title}}</h3>
+    <p class="category">{{content.category}}</p>
+  </div>
+  <button class="play-btn" type="button" (click)="onPlay()">&#9654;</button>
+</div>
